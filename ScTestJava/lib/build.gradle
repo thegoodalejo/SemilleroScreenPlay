@@ -1,52 +1,51 @@
-defaultTasks 'clean','test','aggregate'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'com.sophossolutions'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
-    mavenLocal()
     jcenter()
+    mavenLocal()
 }
 
 buildscript {
     repositories {
         mavenLocal()
         jcenter()
+        mavenCentral()
+    }
+    ext{
+        serenityVersion = "2.2.6"
+        serenityGradleVersion = "2.4.2"
+        serenityCucumberVersion = "2.2.6"
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.2")
     }
-}
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-ext {
-    slf4jVersion = '1.7.7'
-    serenityCoreVersion = '2.4.34'
-    junitVersion = '4.13.1'
-    assertJVersion = '3.8.0'
-    logbackVersion = '1.2.3'
-    lombokVersion = '1.18.20'
 }
 
 dependencies {
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-                "junit:junit:${junitVersion}",
-                "org.assertj:assertj-core:${assertJVersion}",
-                "org.projectlombok:lombok:${lombokVersion}",
-                "ch.qos.logback:logback-classic:${logbackVersion}"
+    compile group: 'net.serenity-bdd', name: 'serenity-junit', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-core', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-cucumber5', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "2.2.6"
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    testCompile group: 'junit', name: 'junit', version: '4.13'
 }
 
 test {
-    testLogging.showStandardStreams = true
     systemProperties System.getProperties()
+    systemProperty "file.encoding", "UTF-8"
+    systemProperty "feature.file.encoding", "UTF-8"
+    systemProperty "cucumber.options", System.properties.getProperty("cucumber.options")
+    testLogging.showStandardStreams = true
+    finalizedBy(aggregate)
 }
 
 gradle.startParameter.continueOnFailure = true
-
-test.finalizedBy(aggregate)
