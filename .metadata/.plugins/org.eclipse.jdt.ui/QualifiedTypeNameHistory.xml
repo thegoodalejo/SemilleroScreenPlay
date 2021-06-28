@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.Tasks"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Enter"/>
+    <fullyQualifiedTypeName name="com.sophos.semillero.ui.LoginPage"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Click"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.cucumber.CucumberWithSerenity"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
+    <fullyQualifiedTypeName name="io.cucumber.java.Before"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.actors.OnlineCast"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Open"/>
+    <fullyQualifiedTypeName name="com.sophos.semillero.runner.Login"/>
+    <fullyQualifiedTypeName name="com.sophos.semillero.tasks.Login"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.Question"/>
+    <fullyQualifiedTypeName name="groovy.lang.DelegatesTo.Target"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.targets.Target"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.questions.Text"/>
+    <fullyQualifiedTypeName name="net.serenitybdd.screenplay.GivenWhenThen"/>
+    <fullyQualifiedTypeName name="com.ibm.icu.impl.number.PNAffixGenerator.Result"/>
+    <fullyQualifiedTypeName name="com.sophos.semillero.ui.HomePage"/>
+    <fullyQualifiedTypeName name="org.hamcrest.core.IsEqual"/>
+    <fullyQualifiedTypeName name="com.sophos.semillero.questions.Result"/>
+</qualifiedTypeNameHistroy>
