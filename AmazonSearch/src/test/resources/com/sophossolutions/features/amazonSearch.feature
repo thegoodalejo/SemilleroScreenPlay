@@ -1,11 +1,16 @@
-#Author: julian.rodriguez@sophossolutions.com
-Feature: Iniciar sesion de forma exitosa
-  Yo como aprendiz de automatizacion  
-  Necesito inciar sesion en una pagina
-  
-  Para aprender a automatizar aplicaciones web
+#Author: Grupo_Uno
 
-  Scenario: Iniciar sesion en Guru99
-    Given "Semillero" desea ir a la pagina de "http://demo.guru99.com/V4/"
-    When Ingresa nombre de usuario "mgr123" y password "mgr!23"
-    Then Valida que el titulo sea "Manger Id : mgr123"
+Feature: Realizar Busqueda de producto
+  Yo deseo realizar la busqueda de un producto en Amazon
+
+  Scenario Outline: Realizar la busqueda de producto
+    Given Deseo ir a la pagina de "https://www.amazon.com/"
+    When Ingreso el producto <producto>
+    Then Imprimo los tres articulos con sus precios
+
+    Examples: 
+      | producto               |
+      | "escritorio"           |
+ #     | "camaras fotograficas" |
+ #     | "impresora"            |
+
