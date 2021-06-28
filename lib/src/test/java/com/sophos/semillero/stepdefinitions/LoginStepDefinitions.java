@@ -24,7 +24,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 public class LoginStepDefinitions {
 
 	
-	@Given("Deseo ir a la pagina de {string}")
+	/*@Given("Deseo ir a la pagina de {string}")
 	public void deseoIrALaPaginaDe(String string) {
 	   theActorCalled("Santiago Espinal").wasAbleTo(Open.url(string));
 	}
@@ -44,7 +44,7 @@ public class LoginStepDefinitions {
 		setTheStage(new OnlineCast());
 	}
 	
-	
+	*/
 	
 	
 	
