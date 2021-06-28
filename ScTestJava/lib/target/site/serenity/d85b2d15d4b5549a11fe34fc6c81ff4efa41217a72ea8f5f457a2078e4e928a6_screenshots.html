@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-06-2021 16:08</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-06-2021 17:32</span>
     <br style="clear:left"/>
 </div>
 
@@ -189,9 +189,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Buscar producto
+                                <span class="error-color">Buscar producto
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -205,27 +205,71 @@
 
     <div class="clr"></div>
 
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Debe  ir a la pagina de "https://es.aliexpress.com/"<br>When Buscar los productos &lt;producto&gt;<br>Then Mostrar tres articulos con indice &lt;indice&gt;</div>
+    </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: no such element: Unable to locate element: {'method':'xpath','selector':'//div[22][@class='_1OUGS']//div[@class='_2mXVg _89Qo8']//a//span'}</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophos.semillero.stepdefinitions.AliExpressStepDefinitions.mostrarTresArticulosConIndice(AliExpressStepDefinitions.java:42)<br />✽.Mostrar tres articulos con indice 22,40,60(file:///C:/Users/angel.vivas/Documents/Sophos/Semillero%20Automatización/MyProjects%20GIT/Gradle/SemilleroScreenPlay/ScTestJava/lib/src/test/resources/features/AliExpress.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource514738728984646058.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="d223e86174f1ca88d57b6728518c64442fe6d59f9fe5be2037d3571c950da99f.png" title=" Given Deseo ir a la pagina de &quot;https://es.aliexpress.com/&quot;" width="1366"/>
-                <img src="d223e86174f1ca88d57b6728518c64442fe6d59f9fe5be2037d3571c950da99f.png" title=" Santiago Espinal opens the https://es.aliexpress.com/" width="1366"/>
-                <img src="d223e86174f1ca88d57b6728518c64442fe6d59f9fe5be2037d3571c950da99f.png" title=" Given Deseo ir a la pagina de &quot;https://es.aliexpress.com/&quot; (completed)" width="1366"/>
-                <img src="a78aaa705ca95c1b50923ec909bedcda379a853204164a009441f57f8e341df3.png" title=" When Ingreso nombre de producto &quot;echo dot 3&quot;" width="1366"/>
-                <img src="a78aaa705ca95c1b50923ec909bedcda379a853204164a009441f57f8e341df3.png" title=" Santiago espinal buscar producto" width="1366"/>
-                <img src="cebd0882988d4ba80e445df286acce1feabebe2a51d1687a3f91df6e5db7a436.png" title=" Santiago Espinal clicks on Boton para cerrar imagen " width="1366"/>
-                <img src="63723fe7f95b69e94b989945ae183ddc25db6fd3de8af081aa4419374846bd7d.png" title=" Santiago Espinal clicks on Boton para cerrar imagen  (completed)" width="1366"/>
-                <img src="63723fe7f95b69e94b989945ae183ddc25db6fd3de8af081aa4419374846bd7d.png" title=" Santiago Espinal enters 'echo dot 3' into Campo donde se coloca el producto" width="1366"/>
-                <img src="ba054ab849c16ddf3d3872307563c32a4a9f97e2b4a472b582c6e0212d63e259.png" title=" Santiago Espinal enters 'echo dot 3' into Campo donde se coloca el producto (completed)" width="1366"/>
-                <img src="ba054ab849c16ddf3d3872307563c32a4a9f97e2b4a472b582c6e0212d63e259.png" title=" Santiago Espinal clicks on Boton para buscar producto" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" Santiago Espinal clicks on Boton para buscar producto (completed)" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" Santiago espinal buscar producto (completed)" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" When Ingreso nombre de producto &quot;echo dot 3&quot; (completed)" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" Then Valido que se muestren tres articulos" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" Then result" width="1366"/>
-                <img src="7f3668b3f1ef088176bcbb16e9ffc8b0f2b809c3ad46418e611d2cd22ee6005c.png" title=" Then Valido que se muestren tres articulos (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="ef042786dcc7a648c076bb391994b80d78492d591977c264037d8f41e0eeaef7.png" title=" Example: {producto=echo dot 3, indice=22,40,60}" width="1366"/>
+                <img src="ef042786dcc7a648c076bb391994b80d78492d591977c264037d8f41e0eeaef7.png" title=" Given Debe  ir a la pagina de &quot;https://es.aliexpress.com/&quot;" width="1366"/>
+                <img src="ef042786dcc7a648c076bb391994b80d78492d591977c264037d8f41e0eeaef7.png" title=" Santiago Espinal opens the https://es.aliexpress.com/" width="1366"/>
+                <img src="ef042786dcc7a648c076bb391994b80d78492d591977c264037d8f41e0eeaef7.png" title=" Given Debe  ir a la pagina de &quot;https://es.aliexpress.com/&quot; (completed)" width="1366"/>
+                <img src="ef042786dcc7a648c076bb391994b80d78492d591977c264037d8f41e0eeaef7.png" title=" When Buscar los productos echo dot 3" width="1366"/>
+                <img src="b018bdf62528ab503fa5851389b03d37b17d570f2d6fca0262cc93ce6bbb4f9a.png" title=" Santiago espinal buscar producto" width="1366"/>
+                <img src="f91b4bbb7796cc46ba7956198cebe8c04c7a5c30c208c6db5eb319e962919d6f.png" title=" Santiago Espinal clicks on Boton para cerrar imagen " width="1366"/>
+                <img src="a70e7fd9e51a3b581708374cef4d4a7df252e2898cb218a0954bef917a1ede1a.png" title=" Santiago Espinal clicks on Boton para cerrar imagen  (completed)" width="1366"/>
+                <img src="a70e7fd9e51a3b581708374cef4d4a7df252e2898cb218a0954bef917a1ede1a.png" title=" Santiago Espinal enters 'echo dot 3' into Campo donde se coloca el producto" width="1366"/>
+                <img src="c246421b809d817e3a8f38315bc92ce9f951a0a3ea5048194e768dcbe9e7c169.png" title=" Santiago Espinal enters 'echo dot 3' into Campo donde se coloca el producto (completed)" width="1366"/>
+                <img src="c246421b809d817e3a8f38315bc92ce9f951a0a3ea5048194e768dcbe9e7c169.png" title=" Santiago Espinal clicks on Boton para buscar producto" width="1366"/>
+                <img src="824cd508bf860897781ddf54ac3764414cc019580e592e4d470d1a693b0cc039.png" title=" Santiago Espinal clicks on Boton para buscar producto (completed)" width="1366"/>
+                <img src="590e8763f60b159d0422c2a86c8347225a96b70ad8314f57801f8b4536157300.png" title=" Santiago espinal buscar producto (completed)" width="1366"/>
+                <img src="590e8763f60b159d0422c2a86c8347225a96b70ad8314f57801f8b4536157300.png" title=" When Buscar los productos echo dot 3 (completed)" width="1366"/>
+                <img src="590e8763f60b159d0422c2a86c8347225a96b70ad8314f57801f8b4536157300.png" title=" Then Mostrar tres articulos con indice 22,40,60" width="1366"/>
+                <img src="590e8763f60b159d0422c2a86c8347225a96b70ad8314f57801f8b4536157300.png" title=" Then result" width="1366"/>
+                <img src="6744c01cb729c48d3032277dc27fdbed2135a66a383718969325729cfa077594.png" title=" Then result (completed): <span class='error-color'>ERROR</span>" width="811"/>
             </div>
         </div>
 

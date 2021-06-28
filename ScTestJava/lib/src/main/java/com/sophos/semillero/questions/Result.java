@@ -1,8 +1,5 @@
 package com.sophos.semillero.questions;
 
-import static net.serenitybdd.screenplay.Tasks.instrumented;
-
-import org.openqa.selenium.By;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -18,23 +15,16 @@ public class Result implements Question<Boolean>{
 		this.NombreArticulo = nombrearticulo;
 		this.PrecioArticulo = precioarticulo;
 	}
-	public Result(String nombrearticulo, String precioarticulo) {
-		this.NombreArticulo = Target.the("El nombre del aticulo").locatedBy(nombrearticulo);
-		this.PrecioArticulo = Target.the("El precio del articulo").located(By.xpath(precioarticulo));
-	}
 	@Override
 	public Boolean answeredBy(Actor actor) {
 		
-		System.out.println(Text.of(NombreArticulo).viewedBy(actor).asString());
-		System.out.println(Text.of(PrecioArticulo).viewedBy(actor).asString());
+		System.out.println("Producto: " + Text.of(NombreArticulo).viewedBy(actor).asString());
+		System.out.println("Precio: " + Text.of(PrecioArticulo).viewedBy(actor).asString());
 		return true;
 	}
 	
-	public static Result  in(Target Nombrearticulo, Target Precioarticulo) {
-		return new Result(Nombrearticulo,Precioarticulo);
-	}
-	public static Result  Resultados(String Nombrearticulo, String Precioarticulo) {
-		return new Result(Nombrearticulo,Precioarticulo);
+	public static Result  in(Target nombreArticulo, Target precioArticulo) {
+		return new Result(nombreArticulo,precioArticulo);
 	}
 	
 }

@@ -12,7 +12,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		glue = "com.sophos.semillero.stepdefinitions",
 		features = "src/test/resources/features/AliExpress.feature",
-		snippets = SnippetType.CAMELCASE)
+		snippets = SnippetType.CAMELCASE,
+		strict = true
+		)
 public class AliExpressR {
 
 }
