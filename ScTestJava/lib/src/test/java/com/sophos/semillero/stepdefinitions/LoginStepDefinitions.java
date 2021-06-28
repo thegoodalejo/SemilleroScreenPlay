@@ -1,16 +1,22 @@
 package com.sophos.semillero.stepdefinitions;
 
+import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
+import org.hamcrest.core.IsEqual;
+
+import com.sophos.semillero.questions.Result;
+import com.sophos.semillero.tasks.Login;
+import com.sophos.semillero.ui.HomePage;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-
-import com.sophos.semillero.tasks.Login;
 
 public class LoginStepDefinitions {
 
@@ -26,7 +32,7 @@ public class LoginStepDefinitions {
 
 	@Then("Valido que el tiitulo sea {string}")
 	public void validoQueElTiituloSea(String string) {
-	    System.out.println("Then");
+	theActorInTheSpotlight().should(seeThat(Result.in(HomePage.TXT_WELCOME),IsEqual.equalTo(string)));
 	}
 	
 	@Before()
