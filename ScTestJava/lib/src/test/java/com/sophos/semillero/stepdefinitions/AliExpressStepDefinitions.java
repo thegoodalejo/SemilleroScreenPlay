@@ -7,8 +7,9 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.questions.Result;
-import com.sophos.semillero.tasks.Login;
-import com.sophos.semillero.ui.HomePage;
+import com.sophos.semillero.tasks.BuscarProducto;
+import com.sophos.semillero.ui.AliExpressHomePage;
+import com.sophos.semillero.ui.AliExpressResultPage;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -21,9 +22,25 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 
 
-public class LoginStepDefinitions {
+public class AliExpressStepDefinitions {
 
+	@Given("Deseo ir a la pagina de {string}")
+	public void deseoIrALaPaginaDe(String string) {
+		theActorCalled("Santiago Espinal").wasAbleTo(Open.url(string));
+	}
+
+	@When("Buscar los productos (.+)$")
+	public void ingresoNombreDeProducto(String NombreProducto) {
+		theActorCalled("Santiago Espinal").wasAbleTo(BuscarProducto.in(NombreProducto));
+	}
+
+	@Then("Valido que se muestren tres articulos con indice (.+)$")
+	public void validoQueSeMuestrenTresArticulos(String Indice) {
+		theActorInTheSpotlight().should(seeThat(Result.in(AliExpressResultPage.TXT_PRODUCTO1,AliExpressResultPage.TXT_PRECIO1)));
+	}
 	
+	
+	/*
 	@Given("Deseo ir a la pagina de {string}")
 	public void deseoIrALaPaginaDe(String string) {
 	   theActorCalled("Santiago Espinal").wasAbleTo(Open.url(string));
@@ -38,7 +55,7 @@ public class LoginStepDefinitions {
 	public void validoQueElTiituloSea(String string) {
 		theActorInTheSpotlight().should(seeThat(Result.in(HomePage.TXT_WELCOME),IsEqual.equalTo(string)));
 	}
-	
+	*/
 	@Before()
 	public void setup() {
 		setTheStage(new OnlineCast());

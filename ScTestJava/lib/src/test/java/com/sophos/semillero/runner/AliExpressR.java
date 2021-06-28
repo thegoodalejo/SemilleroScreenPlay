@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue = "com.sophos.semillero.stepdefinitions",
-		features = "src/test/resources/features/login.feature",
+		features = "src/test/resources/features/AliExpress.feature",
 		snippets = SnippetType.CAMELCASE)
-public class Login {
+public class AliExpressR {
 
 }
