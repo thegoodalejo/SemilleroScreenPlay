@@ -10,8 +10,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
 		glue= "com.sophossolutions.stepdefinitions",
 		features= "src/test/resources/com/sophossolutions/features/amazonSearch.feature",
-		snippets= SnippetType.CAMELCASE
-		)
-public class AmazonSearch
-{	
+		snippets= SnippetType.CAMELCASE)
+public class AmazonSearch{	
 }

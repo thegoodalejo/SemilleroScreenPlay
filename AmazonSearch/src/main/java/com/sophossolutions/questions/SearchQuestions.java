@@ -29,7 +29,7 @@ public class SearchQuestions implements Question<String>
 		
 		try {
 
-			precioProducto= " Precio: " + Text.of(strPrecioProducto).viewedBy(actor).asString()+ ".";
+			precioProducto= " Precio: " + Text.of(strPrecioProducto).viewedBy(actor).asString().replace('\n', '.');
 		}
 		catch(Exception e)
 		{
