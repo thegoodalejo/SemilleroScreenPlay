@@ -11,6 +11,6 @@ Feature: Realizar Busqueda de producto
     Examples: 
       | producto               |
       | "escritorio"           |
- #     | "camaras fotograficas" |
- #     | "impresora"            |
+      | "camaras fotograficas" |
+      | "impresora"            |
 

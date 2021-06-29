@@ -11,22 +11,38 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class SearchQuestions implements Question<String>
 {
-	private Target strObteniendo;
-	
-	public SearchQuestions(Target strObteniendo)
+	private Target strNombreProducto;
+	private Target strPrecioProducto;
+
+	public SearchQuestions(Target strNombreProducto, Target strPrecioProducto)
 	{
-		this.strObteniendo = strObteniendo;
+		this.strNombreProducto = strNombreProducto;
+		this.strPrecioProducto = strPrecioProducto;
 	}
+	
 	
 	@Override
 	public String answeredBy(Actor actor)
 	{
-		return Text.of(strObteniendo).viewedBy(actor).asString();
-	}
+		String nombreProducto= "Nombre: " + Text.of(strNombreProducto).viewedBy(actor).asString()+ ",";
+		String precioProducto;
+		
+		try {
+
+			precioProducto= " Precio: " + Text.of(strPrecioProducto).viewedBy(actor).asString()+ ".";
+		}
+		catch(Exception e)
+		{
+			precioProducto= " Articulo agotado";
+		}
+		
+		System.out.println(nombreProducto + precioProducto);
+		return "Ok";
+		}
 	
-	public static SearchQuestions in(Target txt)
+	public static SearchQuestions showResults(Target strNombreProducto, Target strPrecioProducto)
 	{
-		return new SearchQuestions(txt);
+		return new SearchQuestions(strNombreProducto, strPrecioProducto);
 	}
 
 }
